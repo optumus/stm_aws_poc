@@ -11,6 +11,15 @@
 #include "AWSClient/AWSClient.h"
 #include "aws_credentials.h"
 
+// BSP Sensor related includes
+#include "stm32l475e_iot01_tsensor.h"
+#include "stm32l475e_iot01_psensor.h"
+#include "stm32l475e_iot01_hsensor.h"
+// #include "stm32l475e_iot01_accelero.h"
+// #include "stm32l475e_iot01_gyro.h"
+// #include "stm32l475e_iot01_magneto.h"
+// #include "stm32l475e_iot01_qspi.h"
+
 extern "C" {
 #include "core_json.h"
 }
@@ -55,6 +64,17 @@ int main()
     int ret;
 
     mbed_trace_init();
+
+    //BSP Sensor Init
+    BSP_TSENSOR_Init();
+    BSP_PSENSOR_Init();
+    BSP_HSENSOR_Init();
+    // BSP_ACCELERO_Init();
+    // BSP_GYRO_Init();
+    // BSP_MAGNETO_Init();
+    // BSP_QSPI_Init();
+    tr_info("BSP Sensor init Success");
+
     tr_info("Connecting to the network...");
     auto network = NetworkInterface::get_default_instance();
     if (network == NULL) {

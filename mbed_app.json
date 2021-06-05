@@ -7,7 +7,7 @@
         },
         "aws-mqtt-topic": {
             "help": "Topic to subscribe & publish to",
-            "value": "\"sdkTest/sub\""
+            "value": "\"mySTBoard/sensorValues\""
         },
         "aws-client-identifier": {
             "help": "Unique identifier for the thing",
