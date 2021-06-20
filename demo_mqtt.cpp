@@ -130,7 +130,7 @@ void demo()
     // Stop when we receive a cloud-to-device message
     char payload[128];
 
-    while(true)
+    for(char msgSendCount = 0; msgSendCount < 10 ; msgSendCount++)
     {
         if (reply_received) {
             // If we have received a message from the cloud, don't send more messeges

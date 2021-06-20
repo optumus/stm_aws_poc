@@ -11,7 +11,7 @@
         },
         "aws-client-identifier": {
             "help": "Unique identifier for the thing",
-            "value": "\"arn:aws:iot:ap-south-1:646478008236:thing/ST_HelloWorld\""
+            "value": "\"arn:aws:iot:ap-south-1:646478008236:thing/ST_HelloWorld/shadow_1\""
         }
     },
     "target_overrides": {
@@ -21,7 +21,7 @@
             "platform.error-filename-capture-enabled": true,
             "platform.stdio-convert-newlines": true,
             "platform.stdio-baud-rate": 115200,
-            "aws-client.shadow": false,
+            "aws-client.shadow": true,
             "aws-client.aws-sdk-trace": false
         },
         "DISCO_L475VG_IOT01A": {
